@@ -13,7 +13,7 @@ const BabysitsForm: React.FC = () => {
     canCook: false,
     tooLate: false,
     useapp: false,
-    language: [] as string[],
+    language: "",
     addNote: "",
   });
   // const [showModal, setShowModal] = useState(false);
@@ -29,11 +29,6 @@ const BabysitsForm: React.FC = () => {
       setFormData((prevData) => ({
         ...prevData,
         [name]: checked,
-      }));
-    } else if (name === "language") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: [...prevData[name], value], 
       }));
     } else {
       setFormData((prevData) => ({
